@@ -1,0 +1,44 @@
+
+.menuItem {
+    text-align: center;
+    line-height: 0.4em;
+    padding-right: 8px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    cursor: pointer;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    position: relative;
+    height: 200px;
+    
+}
+.material-icons {
+
+    color: #4285f4;
+    font-size: 45px;
+    
+}
+
+p {
+    color: grey;
+    font-size: 13px;
+    line-height: 1.3em;
+}
+h4{
+// font-weight: 700;
+// max-width: 130px;
+padding-top: 5px;
+text-align: center;
+font-size:40 !important;
+}
+.menuItem:hover{
+    border-radius: 5px;
+    background-color: #e0e0e0;
+   
+}
+.row {
+    margin-top: 30px;
+}
+.menu {
+    height: 100%;
+    width: 100%;
+}

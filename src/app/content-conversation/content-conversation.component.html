@@ -1,0 +1,119 @@
+<app-header></app-header>
+<div class="container-fluid">
+<div class="container">
+    <ul>
+      <li data-toggle="modal" data-target="#myModal">Upload<br>Content</li>
+      <li>Review<br>Conversation</li>
+      <li>Enrich<br>Conversation</li>
+      <li>Publish<br>Conversation</li>
+      <li>View<br>Content</li>
+      <li>Test<br>Boat</li>
+    </ul>
+  <div class="row table_head">
+    <div class="col-md-3">
+      <h5>File Name </h5>
+    </div>
+    <div class="col-md-3">
+      <h5>File Description </h5>
+    </div>
+    <div class="col-md-2">
+      <h5>Status </h5>
+    </div>
+    <div class="col-md-2">
+      <h5>Last Updated on </h5>
+    </div>
+    <div class="col-md-2">
+      <h5>Uploaded by </h5>
+    </div>
+  </div>
+  <div class="row table_head">
+    <div class="col-md-3">
+      <ul>
+        <li class="file_type">pdf</li>
+        <li class="file-name">Abcdefghijkklmnop.pdf</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h5>Pdf file on generations of sales and taxes</h5>
+    </div>
+    <div class="col-md-2">
+      <h5>Uploaded</h5>
+    </div>
+    <div class="col-md-2">
+      <h5> 2-jan 2019 </h5>
+    </div>
+    <div class="col-md-2">
+      <h5>Nilesh </h5>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <form id="form" class="modal-content" #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add Content</h4>
+          </div>
+          <div class="modal-body">
+              <div class="radio">
+                <label><input type="radio" (change)="radioClicked('file')" name="optradio" value="file" ngModel>File</label>
+              </div>
+              <div class="file">
+                <div class="form-group">
+                  <input type="text" class="form-control" ngModel name="fileName"   placeholder="Name" [disabled]="weblink || video ">
+                </div>
+                <input type="file" (change)="handleFileUpload($event.target.files, 'newfile')"  placeholder="choose files(only pdf .txt)" ngModel name="file" [disabled]="weblink || video ">
+              </div>
+                <div class="radio">
+                <label><input type="radio" (change)="radioClicked('weblink')"  name="optradio" value="web_link" ngModel >Weblink</label>
+              </div>
+              <div class="weblink">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="weblink_name" ngModel placeholder="Name"  [disabled]="file || video ">
+                </div>
+                <div class="form-group">
+                  <input type="url"  pattern="https://.*" size="30" class="form-control" name="weblink_url" ngModel placeholder="url"  [disabled]="file || video ">
+                </div>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="optradio" (change)="radioClicked('video')"  value="video" ngModel >Video</label>
+              </div> 
+              <div class="video">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="video_name" ngModel placeholder="Name"  [disabled]="weblink || file ">
+                </div>
+                <div class="form-group">
+                  <input type="url" pattern="https://.*" size="30"  class="form-control" name="video_url" ngModel placeholder="url"  [disabled]="weblink || file ">
+                </div>
+              </div>       
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+            <button class="btn btn-success" type="submit" >UPLOAD</button>
+          </div>
+
+        </form>  
+        </div>
+        
+      </div>
+    </div>
+
+
