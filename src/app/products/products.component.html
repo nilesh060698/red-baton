@@ -1,0 +1,22 @@
+<div class="col-md-4" *ngFor="let product of products;index as i">
+  <div class="product-card">
+      <div class="badge">New</div>
+      <div class="product-tumb">
+          <img src="https://cdn1.smartprix.com/rx-in35FzmKF-w1200-h1200/nikon-d3500-dslr-cam.jpg" alt="">
+      </div>
+      <div class="product-details" style="cursor: pointer;" (click)="routeHandler(product,i)" >
+          <span class="product-catagory">Camera</span>
+          <h4>{{product.name}}</h4>
+          <div class="product-bottom-details" (click)="routeHandler(product,i)">
+              <div class="product-price"><small>300</small>{{product.price}}</div>
+              <div class="product-links">
+                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-shopping-cart"></i>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-12" *ngIf="products.length == 0">
+  <h3 style="color: grey;"><i>No products Available</i></h3>
+</div>

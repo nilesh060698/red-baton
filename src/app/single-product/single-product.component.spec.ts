@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiMenuComponent } from './ui-menu.component';
+import { SingleProductComponent } from './single-product.component';
 
-describe('UiMenuComponent', () => {
-  let component: UiMenuComponent;
-  let fixture: ComponentFixture<UiMenuComponent>;
+describe('SingleProductComponent', () => {
+  let component: SingleProductComponent;
+  let fixture: ComponentFixture<SingleProductComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UiMenuComponent ]
+      declarations: [ SingleProductComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UiMenuComponent);
+    fixture = TestBed.createComponent(SingleProductComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

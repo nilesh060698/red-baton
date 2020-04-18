@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+          <app-sidebar (sidebarData)="filterData($event)">
+              
+          </app-sidebar>
+      </div>
+      <div class="col-md-9">
+          <app-products [products]="filteredData">
+
+          </app-products>
+      </div>
+
+  </div>
+</div>

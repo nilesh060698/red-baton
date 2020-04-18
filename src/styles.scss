@@ -1,15 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~material-design-icons/iconfont/material-icons.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-* {
+// * {
     
-}
-body {
-    overflow-x: hidden;
-    width: 100%;
-}
-@media(max-width:600px) {
-    body {
-        overflow-x : hidden;
-    }
-}
+// }
+// body {
+//     overflow-x: hidden;
+//     width: 100%;
+//     background-color: #eeeeee;
+// }
+// @media(max-width:600px) {
+//     body {
+//         overflow-x : hidden;
+//     }
+// }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+//     border-color:rgb(66, 134, 244); 
+//   }
+  
+//   .mat-radio-button.mat-accent .mat-radio-inner-circle{
+//     color:rgb(66, 134, 244);
+//     background-color:rgb(66, 134, 244) ;
+//   }

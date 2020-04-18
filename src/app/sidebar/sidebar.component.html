@@ -1,0 +1,18 @@
+<div class="sidebar">
+<button mat-button (click)="viewAll()" style="color: green;" >View All products</button>
+<h4>Select Category</h4>
+<mat-form-field>
+  <mat-label>Categories</mat-label>
+  <mat-select [(ngModel)] ="activeCat" (ngModelChange)="categoryHandler()">
+    <mat-option *ngFor="let cat of categories" [value]="cat.id">
+      {{cat.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<h4>Select Feature</h4>
+<mat-radio-group name="opList" class="feature" fxLayout="column"  #radioGroup="matRadioGroup" >
+  <mat-radio-button *ngFor="let feature of features;index as i" id="radio{{i}}" (change)="radioClicked(feature.id)"  class="radio" name="opList" value="{{feature.name}}"  >{{feature.name}}</mat-radio-button>
+</mat-radio-group>
+<h4>Select Brands</h4>
+<mat-checkbox (change)="checkBoxHandler(brand.id)" style="display: block;font-weight: 400;" *ngFor="let brand of Brands" class="example-margin" >{{brand.name}}</mat-checkbox>
+</div>
